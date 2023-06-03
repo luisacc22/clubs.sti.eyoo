@@ -1,0 +1,549 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color:rgb(241, 241, 241);
+    height: 3400px;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: FuturaLight;
+    src: url(Fonts/futura\ light\ bt.ttf);
+}
+@font-face {
+    font-family: FuturaBold;
+    src: url(Fonts/Futura\ Bold\ font.ttf);
+}
+@font-face {
+    font-family: FuturaBook;
+    src:  url(Fonts/Futura\ Book\ font.ttf);
+}
+@font-face {
+    font-family: FuturaBolder;
+    src: url(Fonts/Futura\ XBlk\ BT.ttf);
+}
+@font-face {
+    font-family: FuturaMediumItal;
+    src: url(Fonts/Futura\ Medium\ Italic\ font.ttf);
+}
+/* nav bar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    font-family: FuturaBook;
+    position: fixed;
+    z-index: 100;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 25px;   
+
+}
+
+#sti_logo{
+    transform: scale(0.4);
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+#user_profile{
+    transform: scale(0.08);
+    position: absolute;
+    left: 1025px;
+    transition: 0.3s;
+
+}
+#user_profile:hover{
+    transform: scale(0.09);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+nav ul li a:hover{
+    color:#2185d1;
+    transition: .3s;
+}
+nav ul li a:after{
+    background-color: #2185d1;
+    color:white;
+    transition: .4s;
+}
+
+/*Home
+Rotating Pictures*/
+
+.pic_slider{
+    position: absolute;
+    width:170px;
+    height: 170px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    left:950px;
+    top:360px;
+}
+
+@keyframes rotate{
+    0% {
+       transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.pic_slider span{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i)*75deg)) translateZ(200px);
+}
+
+.pic_slider span img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.pic_slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
+
+/*Slider Shadow*/
+
+.slider_shadow{
+    height:20px;
+    width:450px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 165px;
+    top:600px;
+    filter:blur(30px); 
+}
+
+/*tagline*/
+#tagline{
+    -webkit-animation: FadeInForms 1.2s both;
+    -moz-animation: FadeInForms 1.2s both;
+    -o-animation: FadeInForms 1.2s both;
+    animation: FadeInForms 1.2s both;
+}
+@-webkit-keyframes FadeInForms{
+    0%{
+        opacity:0;
+        -webkit-transform: translateX(-50px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform: translateX(0);
+    }
+}
+@-moz-keyframes FadeInForms{
+    0%{
+        opacity:0;
+        -moz-transform: translateX(-50px);
+    }
+    100%{
+        opacity:1;
+        -moz-transform: translateX(0);
+    }
+}
+@-o-keyframes FadeInForms{
+    0%{
+        opacity:0;
+        -o-transform: translateX(-50px);
+    }
+    100%{
+        opacity:1;
+        -o-transform: translateX(0);
+    }
+}
+@keyframes FadeInForms{
+    0%{
+        opacity:0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
+    }   
+}
+
+#tagline h1{
+   font-family: FuturaBold;
+   font-size: 50px;
+   position: absolute;
+   left: 130px;
+   top:388px;
+   letter-spacing: 2px;
+}
+#tagline h3{
+    letter-spacing: 1px;
+    font-family: FuturaMediumItal;
+    font-size: 18px;
+    position:absolute;
+    left:143px;
+    top:460px;
+    color: #1b649c;
+}
+#tagline h1 span{
+    color: #2185d1;
+}
+
+
+/*Clubs*/
+
+#clubs{
+    width: 100%;
+    height:650px;
+    background-color: #1b649c;
+    position: absolute;
+    top: 1150px;
+}
+#club_list{
+    display: flex;
+    position: absolute;
+    top:50px;
+}
+#club_list ul li{
+    display: block;
+    list-style-type: none;
+    padding: 10px 20px;
+    margin-left:50px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: FuturaBold;
+    color: #2185d1;
+    background-color: white;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+#club_list ul li:hover{
+    transform: scale(0.9);
+    transition: .3s;
+}
+#clubs h2{
+    font-size: 58px;
+    font-family: FuturaBold;
+    position: absolute;
+    left:500px;
+    color: white;
+    width: 500px;
+}
+
+#each-club-mean{
+    font-size: 28px;
+    font-family: FuturaLight;
+    position: absolute;
+    left:530px;
+    top:430px;
+    color: white;
+    background-color: transparent;
+    width:800px;
+}
+#pic_container{
+    background-color: grey;
+    height:310px;
+    width: 600px;
+    position:absolute;
+    text-align: center;
+    top:125px;
+    left:625px;
+    border-radius:15px;
+}
+
+#pic_container p{
+    color: white;
+    position: relative;
+    top:110px;
+    font-family:FuturaBook;
+    font-size: 30px;
+}
+
+
+/*Register*/
+#register{
+    position: absolute;
+    top:2000px;
+    width: 100%;
+    height:800px;
+}
+#forms{
+    position: absolute;
+    top:100px;
+    width:480px;
+    height:900px;
+    background-color: rgb(255, 248, 232);
+    border: .2px black solid;
+    border-radius: 10px;
+    left:470px;
+    box-shadow: 0 0 5px black;
+}
+.radio{
+    display:inline-flex;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    top:390px;
+    left:170px;
+}
+.radio_input{
+    display:none;
+}
+.radio_label{
+    padding: 8px 14px;
+    font-size:14px;
+    font-family:FuturaBook;
+    color:white;
+    background: #165ba9;
+    cursor:pointer;
+    transition: background .1s;
+}
+.radio_label:not(:last-of-type){
+    border-right: 1px solid black;
+}
+.radio_input:checked + .radio_label{
+    background:#0f3764;
+}
+#first_name{
+    position: absolute;
+    top:100px;
+}
+#last_name{
+    position: absolute;
+    top:170px
+}
+#email{
+    position: absolute;
+    top:240px
+}
+#age{
+    position: absolute;
+    top:310px;
+    padding: 10px 10px 10px 10px;
+    width:100px;
+}
+#birthday{
+    position: absolute;
+    top:308px;
+    padding: 10px 10px 10px 10px;
+    width:100px;
+    left:280px;
+
+}
+.input_register{
+    padding:10px 150px 10px 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    left:80px;
+    font-size:12px;
+}
+#forms span{
+    font-size: 10px;
+    font-family: FuturaBold;
+    position: absolute;
+}
+#fname{
+    top:140px;
+    left:90px;
+}
+#lname{
+    top:210px;
+    left:90px;
+}
+#ename{
+    top:280px;
+    left:90px;
+}
+#age_span{
+    top:350px;
+    left:90px;
+}
+#bdate{
+    top:350px;
+    left:280px;
+}
+#forms h1{
+    font-family: FuturaBook;
+    position:absolute;
+    left:115px;
+    top:20px;
+}
+#forms p{
+    font-family: FuturaBold;
+    font-size: 10px;
+    position: absolute;
+    top:440px;
+    left:205px;
+
+}
+#club_pick{
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    top:460px;
+    left:105px;
+    font-family: FuturaBook;
+    color: white;
+}
+#club_pick ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    background-color: #165ba9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    transition: .5s;
+    cursor: pointer;
+}
+#club_pick ul li a{
+    cursor: pointer;
+    font-size: 20px;
+}
+#club_pick ul li:hover{
+    transform: scale(0.94);
+    transition: .3s;
+}
+
+#register img{
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    filter: blur(5px);
+    
+}
+
+#submit_button{
+    font-family: FuturaBook;
+    letter-spacing: 2px;
+    color:white;
+    position: absolute;
+    top:740px;
+    left:170px;
+    padding:20px 40px;
+    background-color: #165ba9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+    transition: .5s;
+}
+#submit_button:hover{
+    transform: scale(0.94);
+    transition: .3s;
+}
+/* SnackBar = shows up a message when button is clicked */
+
+#snackbar1{
+    visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #165ba9; 
+  color: #fff; 
+  text-align: center; 
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed; 
+  z-index: 1; 
+  left: 50%; 
+  bottom: 30px; 
+  font-family: FuturaBook;
+  border: 1px white solid;
+}
+#snackbar2{
+    visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #165ba9; 
+  color: #fff; 
+  text-align: center; 
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed; 
+  z-index: 1; 
+  left: 50%; 
+  bottom: 30px; 
+  font-family: FuturaBook;
+  border: 1px white solid;
+}
+#snackbar3{
+    visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #165ba9; 
+  color: #fff; 
+  text-align: center; 
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed; 
+  z-index: 1; 
+  left: 50%; 
+  bottom: 30px; 
+  font-family: FuturaBook;
+  border: 1px white solid;
+}
+
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+#snackbar3.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+

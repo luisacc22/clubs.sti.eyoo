@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <title>STI Clubs</title>
+    <link href="STI_Clubs.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <!--navbar-->
+    <nav>
+        <img id="sti_logo" src="sti-logo-transparent.png">
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#clubs">Clubs</a>
+            </li>
+            <li>
+                <a onclick="funcbar()" href="#events">Events</a>
+            </li>
+            <li>
+                <a href="#register">Register</a>
+            </li>
+        </ul>
+        <img onclick="funcbar2()" id="user_profile" src="user.png">
+    </nav>
+<!--snackbar-->
+    <div id="snackbar1">There are no current events...</div>
+    <div id="snackbar2">Coming Soon!</div>
+    <div id="snackbar3">Thank You! Just a pre-test...</div>
+<!--home-->
+<div id="home">
+    <div class="pic_slider">
+        <span style="--i:1"><img  src="student1.jpg" alt=""></span>
+        <span style="--i:2"><img  src="student2.jpg" alt=""></span>
+        <span style="--i:3"><img  src="student3.jpg" alt=""></span>
+        <span style="--i:4"><img  src="student4.jpg" alt=""></span>
+        <span style="--i:5"><img  src="student5.jpg" alt=""></span>
+    </div>
+
+    <div class="slider_shadow">
+    </div>
+
+    <div id="tagline">
+        <h1>Be the best that <span>you</span> can be</h1>
+        <h3>By joining clubs on STI</h3>
+    </div>
+</div>
+<!--clubs-->
+<div id="clubs" >
+    
+    <div id="club_list"> 
+        <ul>
+            <li data-aos="fade-right" onclick="rcy_title()">
+                <a onclick="rcy_title()" id="rcy-click">RCY CLUB</a>
+            </li>
+            <li data-aos="fade-right"  onclick="yes_title()">
+                <a onclick="yes_title()" id="yes-click">YES CLUB</a>
+            </li>
+            <li data-aos="fade-right"  onclick="stage_title()">
+                <a onclick="stage_title()" id="stage-click">THE STAGE CLUB</a>
+            </li>
+            <li data-aos="fade-right"  onclick="chef_title()">
+                <a onclick="chef_title()" id="chef-click">CHEF CLUB</a>
+            </li>
+            <li data-aos="fade-right"  onclick="dmc_title()">
+                <a onclick="dmc_title()" id="dmc-click">DMC CLUB</a>
+            </li>
+            <li data-aos="fade-right"  onclick="leader_title()">
+                <a onclick="leader_title()" id="leader-click">LEADERSHIP CLUB</a>
+            </li>
+        </ul>
+    </div>
+    <div data-aos="zoom-in" id="pic_container">
+        <p>No Picture Yet</p>
+    </div>
+
+    <h2 data-aos="fade-down" id="clubs-title-container">RCY Club</h2>
+	<p data-aos="fade-up" id="each-club-mean">A club that will educate and empower the children and youth in the spirit of Red Cross through trainings that include effective leadership, provide opportunities for directing and harnessing their energy and idealism into worthwhile humanitarian activities.</p>
+</div>
+<!--events-->
+
+<!--registration-->
+<div id="register">
+    <img src="student5.jpg">
+    <div data-aos="fade-up" id="forms">
+        <h1>Club Registration</h1>
+        <input class="input_register" type="text" id="first_name" placeholder="Enter your first name">
+        <span id="fname">FIRST NAME</span>
+        <input class="input_register" type="text" id="last_name" placeholder="Enter your last name">
+        <span id="lname">LAST NAME</span>
+        <input class="input_register" type="text" id="email" placeholder="Enter your school email">
+        <span id="ename">EMAIL NAME</span>
+        <input class="input_register" type="text" id="age" placeholder="Enter age">
+        <span id="age_span">AGE</span>
+        <input class="input_register"type="date" id="birthday">
+        <span id="bdate">BIRTHDAY</span>
+        <div class="radio">
+            <input class="radio_input" type="radio" value="option1" name="gender" id="male">
+            <label class="radio_label" for="male">Male</label>
+            <input class="radio_input" type="radio" value="option2" name="gender" id="female">
+            <label class="radio_label" for="female">Female</label>
+            
+        </div>
+        <h5 onclick="funcbar3()" id="submit_button">SUBMIT</h5>
+        <p>PICK YOUR CLUB:</p>
+        <div id="club_pick">
+            <ul>
+                <li class="bg00">
+                    <a>RCY CLUB</a>
+                </li>
+                <li class="bg00">
+                    <a>YES CLUB</a>
+                </li>
+                <li class="bg00">
+                    <a>THE STAGE CLUB</a>
+                </li>
+                <li class="bg00">
+                    <a>CHEF CLUB</a>
+                </li>
+                <li class="bg00">
+                    <a>DMC CLUB</a>
+                </li>
+                <li class="bg00">
+                    <a>LEADERSHIP CLUB</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+    </div>
+</div>
+
+<!--JS script-->
+<script src="STI_Clubs.js"> </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
