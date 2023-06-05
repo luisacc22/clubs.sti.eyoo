@@ -547,3 +547,14 @@ Rotating Pictures*/
     to {bottom: 0; opacity: 0;}
   }
 
+@media only screen and (min-width:400px){
+    #clubs{
+        width:1800px;
+    }
+    #register img{
+        width:1800px;
+    }
+    
+}
+
+
